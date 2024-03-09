@@ -1,0 +1,14 @@
+.sidebar {
+    
+    text-decoration: none;
+
+    &-nav-header {
+        .span {
+
+            &-image {
+                width: 30px;
+                height: 30px
+            }
+        }
+    }
+}
