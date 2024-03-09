@@ -13,6 +13,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
+import { RamsDashbaordComponent } from './pages/components/rams-dashbaord/rams-dashbaord.component';
 
 
 
@@ -33,7 +34,11 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
 
 
 ],
-  declarations: [ AppComponent, RamsSidebarComponent ],
+  declarations: [ 
+    AppComponent, 
+    RamsSidebarComponent,
+    RamsDashbaordComponent
+ ],
   bootstrap:    [ AppComponent ],
   
 })
