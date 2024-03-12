@@ -13,7 +13,17 @@ import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
+import { CardModule } from 'primeng/card';
+import {TableModule} from 'primeng/table';
+import {ToastModule} from 'primeng/toast';
+import {CalendarModule} from 'primeng/calendar';
+import {MultiSelectModule} from 'primeng/multiselect';
+import {DropdownModule} from 'primeng/dropdown';
+
+
 import { RamsDashbaordComponent } from './pages/components/rams-dashbaord/rams-dashbaord.component';
+import { RamsTeacherComponent } from './pages/components/rams-teacher/rams-teacher.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -24,20 +34,26 @@ import { RamsDashbaordComponent } from './pages/components/rams-dashbaord/rams-d
     FormsModule,  
     BrowserAnimationsModule,
     RouterModule.forRoot(routes), 
+    HttpClientModule,
 
     //Prime-ng Modules
     SidebarModule,
     ButtonModule,
     AvatarModule,
     AvatarGroupModule,
-   
-
+    CardModule,
+    TableModule,
+    ToastModule,
+    CalendarModule,
+    DropdownModule,
+    MultiSelectModule
 
 ],
   declarations: [ 
     AppComponent, 
     RamsSidebarComponent,
-    RamsDashbaordComponent
+    RamsDashbaordComponent,
+    RamsTeacherComponent
  ],
   bootstrap:    [ AppComponent ],
   
