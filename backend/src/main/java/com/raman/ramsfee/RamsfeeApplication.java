@@ -1,4 +1,4 @@
-package com.raman.fee.ramsfee;
+package com.raman.ramsfee;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

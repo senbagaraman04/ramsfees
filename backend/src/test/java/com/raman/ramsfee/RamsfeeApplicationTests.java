@@ -1,4 +1,4 @@
-package com.raman.fee.ramsfee;
+package com.raman.ramsfee;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
