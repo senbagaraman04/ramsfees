@@ -10,3 +10,19 @@ export interface ramsInstructor {
     address: string;
     expertise: string[];
 }
+
+export const dummyInstructorData = [
+{
+  address: 'India',
+  expertise : ['Music', 'Dance'],
+  name: 'Bob',
+  phonenumber: '1234567890'
+},
+{
+  address: 'India',
+  expertise : ['Vocal'],
+  name: 'Alice',
+  phonenumber: '9234567890'
+}
+
+];

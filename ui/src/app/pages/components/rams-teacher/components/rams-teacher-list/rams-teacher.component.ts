@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
-import { ramsInstructor } from '../../rams-mock.service';
+import { dummyInstructorData, ramsInstructor } from '../../rams-mock.service';
+import { teacherColumn } from './rams-teacher.column';
 
 @Component({
   selector: 'app-rams-teacher',
@@ -8,58 +9,34 @@ import { ramsInstructor } from '../../rams-mock.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RamsTeacherComponent {
-    instructors: ramsInstructor[] = [];
+  instructors: ramsInstructor[] = [];
 
-    cols: any[] = [];
-    showDialog = false;
-  
-    @ViewChild('dt') dt: any;
+  cols: any[] = [];
+  showDialog = false;
 
-    constructor() { }
+  @ViewChild('dt') dt: any;
 
-    ngOnInit() {
-      
+  constructor() { }
 
-      //TODO: Dummy Data move to service call
-      this.instructors = [
-        {
-          address: 'India',
-          expertise : ['Music', 'Dance'],
-          name: 'Bob',
-          phonenumber: '1234567890'
-        },
-        {
-          address: 'India',
-          expertise : ['Vocal'],
-          name: 'Alice',
-          phonenumber: '9234567890'
-        }
-       
-      ]
+  ngOnInit() {
+    //TODO: Dummy Data move to service call
+    this.instructors = dummyInstructorData;
+
+    this.cols = teacherColumn;
+
+  }
 
 
-        this.cols = [
-            { field: 'name', header: 'Name'},
-            { field: 'address', header: 'Address' },
-            { field: 'phonenumber', header: 'Phone' },
-            { field: 'expertise', header: 'Expertise' },
-            
-        ];
+  public doGlobalFilter(text?: any) {
+    console.log("global search text: ", text);
+    this.dt.filterGlobal(text.target.value, 'contains');
+  }
 
-      
-    }
+  onAddNewClick() {
+    this.showDialog = true;
+  }
 
-    
-    public doGlobalFilter(text?: any) {
-      console.log("global search text: ", text);
-      this.dt.filterGlobal(text.target.value, 'contains');
-    }
 
-    onAddNewClick() {
-      this.showDialog = true;
-    }
-
- 
 }
 
 
