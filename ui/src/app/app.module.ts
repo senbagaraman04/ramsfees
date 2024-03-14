@@ -19,11 +19,12 @@ import {ToastModule} from 'primeng/toast';
 import {CalendarModule} from 'primeng/calendar';
 import {MultiSelectModule} from 'primeng/multiselect';
 import {DropdownModule} from 'primeng/dropdown';
+import { DialogModule } from 'primeng/dialog';
 
 
 import { RamsDashbaordComponent } from './pages/components/rams-dashbaord/rams-dashbaord.component';
-import { RamsTeacherComponent } from './pages/components/rams-teacher/rams-teacher.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RamsTeacherComponent } from './pages/components/rams-teacher/components/rams-teacher-list/rams-teacher.component';
 
 
 
@@ -46,7 +47,8 @@ import { HttpClientModule } from '@angular/common/http';
     ToastModule,
     CalendarModule,
     DropdownModule,
-    MultiSelectModule
+    MultiSelectModule,
+    DialogModule
 
 ],
   declarations: [ 

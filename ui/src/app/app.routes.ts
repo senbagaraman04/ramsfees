@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { RamsDashbaordComponent } from './pages/components/rams-dashbaord/rams-dashbaord.component';
-import { RamsTeacherComponent } from './pages/components/rams-teacher/rams-teacher.component';
+import { RamsTeacherComponent } from './pages/components/rams-teacher/components/rams-teacher-list/rams-teacher.component';
 
 export const routes: Routes = [
     {
