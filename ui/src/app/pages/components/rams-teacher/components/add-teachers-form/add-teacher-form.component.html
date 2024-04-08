@@ -1,0 +1,44 @@
+<p-card styleClass="teacher-form" class="flex justify-content-start">
+    <form [formGroup]="teacherForm" (ngSubmit)="addUser()" novalidate>
+      <div class="field">
+        <label for="firstName" class="block">First Name</label>
+        <input type="text" pInputText placeholder="First Name" formControlName="firstName" />
+        <small class="p-error block" *ngIf="
+            teacherForm.get('firstName')?.invalid && teacherForm.get('firstName')?.dirty
+          ">
+          First name is required</small>
+      </div>
+      <!-- <div class="field">
+        <label for="lastName" class="block">Last Name</label>
+        <input type="text" pInputText placeholder="Last Name" formControlName="lastName" />
+      </div> -->
+  
+      <div formGroupName="address">
+        <h2>Address</h2>
+        <div class="field">
+          <label for="street" class="block">Place</label>
+          <input type="text" pInputText placeholder="Street" formControlName="street" />
+        </div>
+        <div class="field">
+          <label for="postCode" class="block">Phone Number</label>
+          <input type="text" pInputText placeholder="Phone" formControlName="phone" />
+          <small class="p-error block" *ngIf="
+              teacherForm.get('address')?.get('phone')?.invalid &&
+              teacherForm.get('address')?.get('phone')?.dirty
+            ">
+            Phone is required</small>
+        </div>
+        <div class="field">
+            <label for="postCode" class="block">Expertise</label>
+            <input type="text" pInputText placeholder="expertise" formControlName="expertise" />
+            <small class="p-error block" *ngIf="
+                teacherForm.get('address')?.get('expertise')?.invalid &&
+                teacherForm.get('address')?.get('expertise')?.dirty
+              ">
+              Area of Expertise is required</small>
+          </div>
+      </div>
+  
+      <button pButton type="submit" label="Submit" [disabled]="teacherForm.invalid" aria-labelledby="submit button"></button>
+    </form>
+  </p-card>
